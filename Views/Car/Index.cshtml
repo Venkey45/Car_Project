@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background-color:aliceblue">
+<body>
 
 
     <div class="top-left">
@@ -31,33 +31,39 @@
         <div>
             <video loop autoplay muted width="1500"><source src="~/images/WhatsApp Video 2024-05-11 at 00.54.27_f6f2b2cc.mp4" type="video/mp4"></video>
             <img src="~/images/Supercar6.jpg" alt="Cars" width="1500" height="800" />
+            <div class="div123">
+                <form class="class1">
 
-            <form class="class1">
-                <div id="div1"></div>
-                <label class="control-label">Name</label><br />
-                <input type="text" id="text1" class="form-control" /><br />
-                <span asp-validation-for="Name"></span>
+                    <div id="div1"></div>
+                    <label class="control-label" style="color:skyblue">Name</label><br />
+                    <input type="text" id="text1" class="form-control" /><br />
+                    <span asp-validation-for="Name"></span>
 
-                <label class="control-label">Password</label><br />
-                <input type="text" id="text2" class="form-control" /><br />
-                <span asp-validation-for="password"></span>
+                    <label class="control-label" style="color:skyblue">Password</label><br />
+                    <input type="text" id="text2" class="form-control" /><br />
+                    <span asp-validation-for="password"></span>
 
-                <label class="control-label">Email</label><br />
-                <input type="text" id="text3" class="form-control" /><br />
-                <span asp-validation-for="Email"></span>
+                    <label class="control-label" style="color:skyblue">Email</label><br />
+                    <input type="text" id="text3" class="form-control" /><br />
+                    <span asp-validation-for="Email"></span>
 
-                <label class="control-label">Phone</label>
-                <input type="text" id="text4" class="form-control" /><br />
-                <span asp-validation-for="phone"></span>
+                    <label class="control-label" style="color:skyblue">Phone</label>
+                    <input type="text" id="text4" class="form-control" /><br />
+                    <span asp-validation-for="phone"></span>
 
-                <label class="control-label">OTP</label>
-                <input type="text" id="text4" class="form-control" /><br />
-                <span asp-validation-for="Email_OTP"></span>
-                <input type="button" id="button2" value="otp" class="btn btn-primary" />
+                    <label class="control-label" style="color:skyblue">OTP</label>
+                    <input type="text" id="text4" class="form-control" /><br />
+                    <span asp-validation-for="Email_OTP"></span>
 
-                <input type="button" id="button1" value="Sign in" class="btn btn-primary" />
-                <div id="div1"></div>
-            </form>
+                    <input type="button" id="button2" value="otp" class="btn btn-primary" />
+
+                    <input type="button" id="button1" value="Sign in" class="btn btn-primary" /><br />
+                    <h1 style="font-size:15px;color:white"> Alredy Register please login @Html.ActionLink("Login", "Login")</h1> 
+                    <div id="div1"></div>
+                </form>
+            </div>
+
+            
             <script src="~/lib/jquery/dist/jquery.min.js"></script>
             <script>
                 $("#button1").click(fun1);
@@ -126,7 +132,7 @@
 
         </p>
     </div>
-</body>
-   
+    </body>
+
 
 </html>
