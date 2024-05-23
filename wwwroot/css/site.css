@@ -1,0 +1,179 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.en{
+    padding:0px 0px 0px 0px;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position:absolute;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+/*my Code css*/
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+
+#nav {
+    float: left;
+    padding: 60px 20px 20px 20px;
+    overflow: hidden;
+}
+    /* Adding Me*/
+    #nav ul {
+        float: left;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        text-align: end;
+    }
+
+        #nav ul li {
+            float: left;
+            display: inline-block;
+            padding: 0px 55px 20px 80px;
+            margin: 0px;
+        }
+
+            #nav ul li a {
+                padding: 0px;
+                margin: 0px;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                right: 25px;
+                color: white;
+                align-content: end;
+            }
+
+                #nav ul li a:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+
+                #nav ul li a span {
+                }
+
+                #nav ul li a.active {
+                    color: white;
+                }
+/* My Css*/
+.top-left {
+    top: 0px;
+    right: 50px;
+    left: 16px;
+    color: white;
+}
+
+.h1 {
+    font-size: 50px;
+}
+
+.empty {
+    background-color: black;
+    width: 1500px;
+    height: 500px;
+}
+
+.DIV1 {
+    width: 1500px;
+    height: 500px;
+}
+
+.h3 {
+    padding: 130px 20px 0px 0px;
+    font-family: Arial,sans-serif;
+    letter-spacing: 30px;
+    padding: 130px 0px 0px 5px;
+    align-content: center;
+}
+.form-control{
+    width:300px;
+}
+
+.class1 {
+    padding: 0px 0px 5px 600px;
+}
+.body1{
+    padding:0px 0px 0px 0px;
+}
+.table1{
+    width:800px;
+    padding :0px 0px 0px 600px;
+    text-align:center;
+}
+.bt{
+    
+    width:1500px;
+}
+.venkey {
+    
+}

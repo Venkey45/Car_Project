@@ -1,0 +1,132 @@
+﻿@model Car_Project.Models.Model
+@{
+    var text1 = ViewData["email"] as string;
+            }
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:aliceblue">
+
+
+    <div class="top-left">
+
+        <div id="nav">
+            <ul>
+                <li>@Html.ActionLink("Home", "Welcome")</li>
+                <li>@Html.ActionLink("Register", "Index")</li>
+                <li>@Html.ActionLink("Login", "Login")</li>
+                <li>@Html.ActionLink("Buy", "image")</li>
+                <li class="pad_last">@Html.ActionLink("Booking", "car_Bookking")</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+    <div class="empty">
+        <marquee behavior="scroll" DIRECTION="right" style="font-size:80px; text-align:center; letter-spacing:15px;color:white;padding:130px 0px 0px 0px">
+            THINK BIG DO MORE - CREATIVE
+        </marquee>>
+        <marquee behavior="scroll" style="font-size:40PX; color:white;text-align:center;letter-spacing:15px">      MODAL DELOREN ALPHA 5  - LATEST NEW EDITION 🏎️</marquee>>
+    </div>
+    <div class="typs">
+
+        <div>
+            <video loop autoplay muted width="1500"><source src="~/images/WhatsApp Video 2024-05-11 at 00.54.27_f6f2b2cc.mp4" type="video/mp4"></video>
+            <img src="~/images/Supercar6.jpg" alt="Cars" width="1500" height="800" />
+            <div class="top-left">
+
+
+                <div id="nav" style="color:white">
+                    <ul>
+                        <li><a href="#" style="color:black">🏎️@ViewData["eamil"]</a></li>
+                        <li> <input type="text" id="text1" name="text1" value="@ViewData["eamil"]" /></li>
+                        <li><input type="button" id="button1" value="View Bookings" border="0" /></li>
+                        <li><table id="table1" border="1" style="color:black;" class="table1"></table></li>
+
+                    </ul>
+                </div>
+            </div>
+            <form class="class1">
+            </form>
+
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script>
+
+                $("#button1").click(fun1);
+                function fun1(event) {
+                    event.preventDefault();
+                    var mydata = { "Email": $("#text1").val() };
+                    $.ajax({ url: "/api/Car_Api/Login_user_details1", type: "GET", data: mydata, success: fun2, error: fun3 });
+                }
+                function fun2(response) {
+                    console.log(response); // Log the response to verify its structure
+
+                    // Clear the table and set the header row
+                    $("#table1").html("<tr><th>Booking id</th><th>Model</th><th>Price</th><th>Booking Date</th></tr>");
+
+                    // Append each row of data to the table
+                    for (var i = 0; i < response.length; i++) {
+                        $("#table1").append(
+                            "<tr><td>" + response[i].booking_id +
+                            "</td><td>" + response[i].deloreanModel +
+                            "</td><td>" + response[i].deloreanprice +
+                            "</td><td>" + response[i].time +
+                            "</td></tr>"
+                        );
+                    }
+                }
+
+
+
+                function fun3(xhr) {
+                    alert("No Data Found");
+                }
+
+            </script>
+
+
+
+            <img src="~/images/SupercarIN2.webp" alt="cars" width="1500" height="800" />
+
+            <div style="background-color:black;" class="DIV1">
+                <h3 style="font-size:60PX; color:white;text-align:center;" class="h3"> T H E  -  N E V E R  - E N D </h3>
+                <h3 style="font-size:25PX;color:white;text-align:center;letter-spacing:50px;"> D   E   L   O   R  E  N</h3>
+            </div>
+            <img src="~/images/DeLorean-Alpha-5-1.jpg" alt="cars" width="1500" height="800" />
+        </div>
+        <div class="empty">
+            <h1 style="font-size:35px; color:white;padding:110px 0px 0px 300px;"> ▌║█║▌│║▌│║▌║▌█║Alpha Gold  ▌│║▌║▌│║║▌█║▌║█</h1>
+            <h3 style="padding: 70px 0px 0px 675px; color: white; font-size: 20px; ">FOLLOW US ON</h3>
+        </div>
+        <ul>
+            <li>
+                <span class="type1">About us</span>
+                <p>The DMC-12 was notable for its unique design, including the stainless steel body and gull-wing doors. However, its performance and reliability were criticized during its production.</p>
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <span class="type2">Our services</span>
+                <p>Despite its short production run and mixed reviews at the time, the DeLorean DMC-12 remains a symbol of 1980s pop culture and automotive design.</p>
+                <a href="#">Read more</a>
+            </li>
+            <li class="pad_last">
+                <span class="type3">Why choose us?</span>
+                <p>Despite its short production span and relatively low sales figures, the DeLorean DMC-12 gained cult status and remains a symbol of 1980s automotive design and pop culture. Its distinctive design features, including the stainless steel body and gull-wing doors, continue to captivate enthusiasts and collectors worldwide.</p>
+                <a href="#">Read more</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="news">
+        <h2>Latest news & events</h2>
+        <p><span><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></span>DeLorean DMC-12, an innovative sports car, produced from 1981 to 1983, with gull-wing doors and stainless-steel body panels. It should have been the commercial coup of the century, leading to massive worldwide sales, but interest waned sharply in just a couple of years..</p>
+        <p>
+            <span><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></span> The cause for the failure of the DMC-12 was largely commercial. Although skilled entrepreneur John Zachary DeLorean had honed his engineering and management skills in the cut-throat world of American auto manufacture, notably when developing the iconic Pontiac Firebird and GTO “muscle cars.” When his employer, General Motors, showed reluctance to finance the successor, he founded the DeLorean Motor Company in 1975 and, basing his design on a Porsche that never went into production, developed the futuristic DMC-12 for the U.S. market.
+
+        </p>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Car_Project.Models.Model>
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:aliceblue">
+
+
+    <div class="top-left">
+
+        <div id="nav">
+            <ul>
+                <li>@Html.ActionLink("Home", "Welcome")</li>
+                <li>@Html.ActionLink("Register", "Index")</li>
+                <li>@Html.ActionLink("Login", "Login1")</li>
+                <li>@Html.ActionLink("Data", "Index2")</li>
+                <li class="pad_last"><a href="#">Booking</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+    <div class="empty">
+        <marquee behavior="scroll" DIRECTION="right" style="font-size:80px; text-align:center; letter-spacing:15px;color:white;padding:130px 0px 0px 0px">
+            THINK BIG DO MORE - CREATIVE
+        </marquee>>
+        <marquee behavior="scroll" style="font-size:40PX; color:white;text-align:center;letter-spacing:15px">      MODAL DELOREN ALPHA 5  - LATEST NEW EDITION 🏎️</marquee>>
+    </div>
+    <div class="typs">
+
+        <div>
+            <video loop autoplay muted width="1500"><source src="~/images/WhatsApp Video 2024-05-11 at 00.54.27_f6f2b2cc.mp4" type="video/mp4"></video>
+            <img src="~/images/Supercar6.jpg" alt="Cars" width="1500" height="800" />
+
+            <form class="class1">
+                <div id="div1"></div>
+                <label class="control-label">Name</label><br />
+                <input type="text" id="text1" class="form-control" required /><br />
+
+
+                <label class="control-label">Phone</label><br />
+                <input type="text" id="text2" class="form-control" required /><br />
+
+
+                <label class="control-label">Email</label><br />
+                <input type="text" id="text3" class="form-control" required /><br />
+
+
+                <label class="control-label">Model</label><br />
+
+                <script>
+                    function displayPrice() {
+                        var dropdown = document.getElementById("car1");
+                        var selectedOption = dropdown.options[dropdown.selectedIndex];
+
+                        var price = selectedOption.value;
+                        document.getElementById("priceTextBox").value = price;
+                    }
+                </script>
+                <select id="car1" name="cars" onchange="displayPrice()">
+                    @foreach (var car in Model)
+                    {
+        <option value="@car.Deloreanprice">@car.DeloreanModel</option>}
+                </select><br />
+                <label class="control-label">Price</label>
+                <input type="text" id="priceTextBox" class="form-control" name="priceTextBox" readonly /><br />
+
+                <label class="control-label">Date</label>
+                <input type="date" id="text5" class="form-control" required /><br />
+
+                <input type="button" id="button1" value="Book Now" class="btn btn-primary" />
+                <div id="div1"></div>
+            </form>
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script>
+                $("#button1").click(fun1);
+
+                function fun1(event) {
+                    event.preventDefault();
+                    var dropdown = $("#car1");
+                    var selectedModelText = dropdown.find("option:selected").text();
+                    var mydata = { "B_Name": $("#text1").val(), "_Phone": $("#text2").val(), "_Email": $("#text3").val(), "Deloreanprice": $("#priceTextBox").val(), "time": $("#text5").val(), "DeloreanModel": selectedModelText };
+                    $.ajax({ url: "/api/Car_Api/user_Booking_details", type: "POST", data: mydata, success: fun2, error: fun3 });
+                }
+                function fun2(response) {
+                    alert("car Booking  succesfully ");
+                }
+                function fun3(xhr) {
+                    alert(xhr.responseText);
+                }
+            </script>
+            <img src="~/images/SupercarIN2.webp" alt="cars" width="1500" height="800" />
+
+            <div style="background-color:black;" class="DIV1">
+                <h3 style="font-size:60PX; color:white;text-align:center;" class="h3"> T H E  -  N E V E R  - E N D </h3>
+                <h3 style="font-size:25PX;color:white;text-align:center;letter-spacing:50px;"> D   E   L   O   R  E  N</h3>
+            </div>
+            <img src="~/images/DeLorean-Alpha-5-1.jpg" alt="cars" width="1500" height="800" />
+        </div>
+        <div class="empty">
+            <h1 style="font-size:35px; color:white;padding:110px 0px 0px 300px;"> ▌║█║▌│║▌│║▌║▌█║Alpha Gold  ▌│║▌║▌│║║▌█║▌║█</h1>
+            <h3 style="padding: 70px 0px 0px 675px; color: white; font-size: 20px; ">FOLLOW US ON</h3>
+        </div>
+        <ul>
+            <li>
+                <span class="type1">About us</span>
+                <p>The DMC-12 was notable for its unique design, including the stainless steel body and gull-wing doors. However, its performance and reliability were criticized during its production.</p>
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <span class="type2">Our services</span>
+                <p>Despite its short production run and mixed reviews at the time, the DeLorean DMC-12 remains a symbol of 1980s pop culture and automotive design.</p>
+                <a href="#">Read more</a>
+            </li>
+            <li class="pad_last">
+                <span class="type3">Why choose us?</span>
+                <p>Despite its short production span and relatively low sales figures, the DeLorean DMC-12 gained cult status and remains a symbol of 1980s automotive design and pop culture. Its distinctive design features, including the stainless steel body and gull-wing doors, continue to captivate enthusiasts and collectors worldwide.</p>
+                <a href="#">Read more</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="news">
+        <h2>Latest news & events</h2>
+        <p><span><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></span>DeLorean DMC-12, an innovative sports car, produced from 1981 to 1983, with gull-wing doors and stainless-steel body panels. It should have been the commercial coup of the century, leading to massive worldwide sales, but interest waned sharply in just a couple of years..</p>
+        <p>
+            <span><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></span> The cause for the failure of the DMC-12 was largely commercial. Although skilled entrepreneur John Zachary DeLorean had honed his engineering and management skills in the cut-throat world of American auto manufacture, notably when developing the iconic Pontiac Firebird and GTO “muscle cars.” When his employer, General Motors, showed reluctance to finance the successor, he founded the DeLorean Motor Company in 1975 and, basing his design on a Porsche that never went into production, developed the futuristic DMC-12 for the U.S. market.
+
+        </p>
+    </div>
+</body>
+
+
+</html>
